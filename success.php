@@ -429,7 +429,7 @@
                     </div>
                     <h1>Ваша заявка отправлена</h1>
                     <p>Мы отправили Вашу заявку сразу в несколько банков - партнёров, очень скоро банки свяжутся с вами и предложат свои условия</p>
-              <a href="#" onclick="return false;" class="next"><p class="text-center">Идет проверка, подождите... <img src='./images/loading-22.gif'' width='40'></p></a>
+                    <a href="#" onclick="return false;" class="next"><p class="text-center">Идет проверка, подождите... <img src='https://creditmarket-crm.ru/site/images/loading-22.gif'' width='40'></p></a>
                 </div>
                 <div class="col-xs-12 text-center">
                     <br>
@@ -449,7 +449,7 @@
                     </div>
                     <h1>Вы попытались зарегистрировать карту банка Тинькофф</h1>
                     <p>К сожалению, мы не принимаем к оплате карты этого банка, попробуйте зарегистрировать другую карту</p>
-                    <a href="#" onclick="window.top.location = 'https://denezhka-24.ru/site/lead.php';" class="add_card"><p class="text-center">Зарегистрировать другую карту</p></a>
+                    <a href="#" onclick="window.top.location = 'https://denezhka-24.ru/exlead.php?lead_id=' + localStorage.getItem('leadId') + '&login=' + localStorage.getItem('leadId') + '&password=' + localStorage.getItem('leadId') + '&partner=' + localStorage.getItem('partner');" class="add_card"><p class="text-center">Зарегистрировать другую карту</p></a>
                     <a href="#" onclick="window.top.location = 'https://denezhka-24.ru/showcase.php';" class="vitrina"><p class="text-center">Нет другой карты</p></a>
                 </div>
                 <div class="col-xs-12 text-center">
@@ -470,7 +470,7 @@
                     </div>
                     <h1>Ваша карта уже зарегистрирована в базе</h1>
                     <p>К сожалению, данные вашей карты уже есть в базе, и ее невозможно зарегистрировать повторно</p>
-                    <a href="#" onclick="window.top.location = 'https://denezhka-24.ru/lead.php';" class="add_card"><p class="text-center">Зарегистрировать другую карту</p></a>
+                    <a href="#" onclick="window.top.location = 'https://denezhka-24.ru/exlead.php?lead_id=' + localStorage.getItem('leadId') + '&login=' + localStorage.getItem('leadId') + '&password=' + localStorage.getItem('leadId') + '&partner=' + localStorage.getItem('partner');" class="add_card"><p class="text-center">Зарегистрировать другую карту</p></a>
                     <a href="#" onclick="window.top.location = 'https://denezhka-24.ru/showcase.php';" class="vitrina"><p class="text-center">Нет другой карты</p></a>
                 </div>
                 <div class="col-xs-12 text-center">
@@ -481,8 +481,7 @@
     </div>
 </section>
 <script>
-
-     setTimeout(doCard, 5000);
+    setTimeout(doCard, 10000);
     function doCard(){
         $.ajax({
             url: 'https://creditmarket-crm.ru/frontend/web/index.php?r=recurrentsv3/default/get-card-status&lead_id=' + getUrlVars()['lead_id'],
@@ -498,8 +497,9 @@
 
                 if(data.card){ // если карта пришла
                     console.log (1);
-                    $("a.next p").html("Посмотреть предложения банков" );
-                    $("a.next").attr('onclick', 'window.top.location = "https://' + data.domine + '/showcase.php?partner=' + data.partner + '"');
+                    window.top.location.replace('window.top.location = "https://' + data.domine + '/showcase.php?partner=' + data.partner + '"');
+                   /* $("a.next p").html("Посмотреть предложения банков" );
+                    $("a.next").attr('onclick', 'window.top.location = "https://' + data.domine + '/showcase.php?partner=' + data.partner + '"');*/
                 }
                 else if (data == 'Tinkoff') {
                     console.log(2);

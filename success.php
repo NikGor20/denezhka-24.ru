@@ -429,7 +429,7 @@
                     </div>
                     <h1>Ваша заявка отправлена</h1>
                     <p>Мы отправили Вашу заявку сразу в несколько банков - партнёров, очень скоро банки свяжутся с вами и предложат свои условия</p>
-                    <a href="#" onclick="return false;" class="next"><p class="text-center">Идет проверка, подождите... <img src='https://creditmarket-crm.ru/site/images/loading-22.gif'' width='40'></p></a>
+                    <a href="#" onclick="return false;" class="next"><p class="text-center">Идет проверка, подождите... <img src='./images/loading-22.gif' width='40'></p></a>
                 </div>
                 <div class="col-xs-12 text-center">
                     <br>

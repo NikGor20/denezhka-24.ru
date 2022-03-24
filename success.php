@@ -497,9 +497,9 @@
 
                 if(data.card){ // если карта пришла
                     console.log (1);
-                    window.top.location.replace('window.top.location = "https://' + data.domine + '/showcase.php?partner=' + data.partner + '"');
+                    window.top.location.replace("https://" + data.domine + '/showcase.php?partner=' + data.partner );
                    /* $("a.next p").html("Посмотреть предложения банков" );
-                    $("a.next").attr('onclick', 'window.top.location = "https://' + data.domine + '/showcase.php?partner=' + data.partner + '"');*/
+                    $("a.next").attr('onclick', 'window.top.location = "https://' + data.domine + '/howcase.php?partner=' + data.partner + '"');*/
                 }
                 else if (data == 'Tinkoff') {
                     console.log(2);

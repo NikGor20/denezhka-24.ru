@@ -114,7 +114,7 @@
                                         Законно спишем все кредиты<br>
                                         и долги в рассрочку
                                     </p>
-                                    <a href="https://mrqz.me/5bcc0f7cba5fd80046bd8b66" target="_blank">
+                                    <a href="https://leads-market.ru/quiz.php" target="_blank">
                                         <button type="button" class="bankrotstvobtn btn">
                                             Подать заявку
                                         </button>

@@ -76,7 +76,7 @@
             <div class="docsblock1">
                 <div class="docsline">
                     <div class="docshref">
-                        <a href="./docs/politics_obrab.pdf" target="blank" class="docsdoclink">
+                        <a href="./docs/policy.pdf" target="blank" class="docsdoclink">
                             <img src="images/img/download.svg" alt="" class="img-fluid">Политика
                             обработки персональных данных</a>
                     </div>
@@ -86,12 +86,12 @@
                             оферта</a>
                     </div>
                     <div class="docshref">
-                        <a href="./docs/sogl_obrab.pdf" target="blank" class="docsdoclink">
+                        <a href="./docs/sogl.pdf" target="blank" class="docsdoclink">
                             <img src="images/img/download.svg" alt="" class="img-fluid">Согласие
                             на обработку персональных данных</a>
                     </div>
                     <div class="docshref">
-                        <a href="./docs/sogl_podpiska.pdf" target="blank" class="docsdoclink">
+                        <a href="./docs/subscribe.pdf" target="blank" class="docsdoclink">
                             <img src="images/img/download.svg" alt="" class="img-fluid">Соглашение на оформление платной подписки</a>
                     </div>
                 </div>

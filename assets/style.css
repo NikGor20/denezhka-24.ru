@@ -216,17 +216,19 @@ a.nuxt-link-exact-active{
     }
     .formblock h2{
         font-weight:500;
-        font-size:24px;
+        font-size:21px;
         line-height:30px;
         text-shadow:-1px -1px 30px rgba(180,255,255,.38);
-        color:#000
+        color:#000;
+        text-align: center;
     }
     .formblockp{
         font-weight:500;
         font-size:18px;
         line-height:21px;
         color:#292929;
-        margin-bottom:20px
+        margin-bottom:20px;
+        text-align: center;
     }
 }
 .bankrotstvo{
@@ -785,6 +787,7 @@ a.nuxt-link-exact-active{
         font-weight:400;
         font-size:17px;
         margin-top:12px
+        text-align: center;
     }
 }
 
@@ -1741,7 +1744,7 @@ a.nuxt-link-exact-active{
         font-size: 17px;
         line-height: 1px !important;
         margin-top: 0px;
-        margin-bottom: 16px !important;
+        margin-bottom: 20px !important;
         text-align: center;
     }
 }

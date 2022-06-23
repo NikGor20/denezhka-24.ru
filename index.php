@@ -46,7 +46,7 @@
 
                         </div>
                         <a class="navbar-brand" href="./">
-                            <img src="images/img/logo.png"  height="50" class="d-inline-block align-top" alt="">
+                            <img src="images/img/logo.png"  height="40" class="d-inline-block align-top" alt="">
 
                         </a>
                     </nav>

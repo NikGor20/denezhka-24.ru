@@ -42,6 +42,10 @@
                                 </li>
                             </ul>
                         </div>
+                        <a class="navbar-brand" href="./">
+                            <img src="images/img/logo.png"  height="40" class="d-inline-block align-top" alt="">
+
+                        </a>
                     </nav>
                 </div>
             </div>

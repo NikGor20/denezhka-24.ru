@@ -784,10 +784,11 @@ a.nuxt-link-exact-active{
 }
 @media (max-width:1023px){
     .day1,.h4_light,.sum1{
-        font-weight:400;
-        font-size:17px;
-        margin-top:12px
+        font-weight: 400;
+        font-size: 18px;
+        margin-top: 12px;
         text-align: center;
+        line-height: 18px;
     }
 }
 

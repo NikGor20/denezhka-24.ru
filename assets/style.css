@@ -92,7 +92,7 @@ a.nuxt-link-exact-active{
         padding:40px 20px 0;
         background:#fff;
         background-size:cover;
-        height:640px
+        height:685px;
     }
     .mapblock h2{
         width:100%;
@@ -245,7 +245,7 @@ a.nuxt-link-exact-active{
 @media (max-width:1023px){
     .bankrotstvo{
         padding:40px 20px 20px;
-        height:501px
+        height:528px;
     }
     .bankrotstvo h2{
         width:205px;
@@ -658,7 +658,7 @@ a.nuxt-link-exact-active{
 }
 .formwrapperp{
     font-weight:300;
-    font-size:16px;
+    font-size:17px;
     line-height:27px;
     color:#4f4f4f
 }
@@ -674,7 +674,6 @@ a.nuxt-link-exact-active{
 }
 @media (max-width:1023px){
     .first_form{
-        max-width:320px;
         width:100%
     }
     .slider,.slider_slider2{
@@ -750,7 +749,7 @@ a.nuxt-link-exact-active{
 @media (max-width:1023px){
     .wrapper .form_content,.wrapper_wrapper2 .form_content{
         font-weight:400;
-        font-size:14px;
+        font-size:17px;
         line-height:122.2%
     }
 }
@@ -763,8 +762,9 @@ a.nuxt-link-exact-active{
 }
 @media (max-width:1023px){
     .form_label,.form_label2,.form_label3{
-        font-size:12px;
-        line-height:122.2%
+        font-size:17px;
+        line-height: 139.2%;
+        margin-top: 8px;
     }
     .form_label2{
         margin-left:0
@@ -783,8 +783,8 @@ a.nuxt-link-exact-active{
 @media (max-width:1023px){
     .day1,.h4_light,.sum1{
         font-weight:400;
-        font-size:12px;
-        margin-top:15px
+        font-size:17px;
+        margin-top:12px
     }
 }
 
@@ -805,7 +805,7 @@ a.nuxt-link-exact-active{
     .citimapblockinfo{
         width:308px;
         height:384px;
-        background:linear-gradient(135deg,rgba(0,0,0,.4),hsla(0,0%,100%,.4)),#ebecf0;
+        background:linear-gradient(135deg,rgb(255 249 249 / 81%),hsla(0,0%,100%,.4)),#ffffff;
         background-blend-mode:soft-light,normal;
         border:2px solid hsla(0,0%,100%,.4);
         box-sizing:border-box;
@@ -871,7 +871,7 @@ a.nuxt-link-exact-active{
     .citimapblockinfo{
         width:282px;
         height:354px;
-        background:linear-gradient(135deg,rgba(0,0,0,.4),hsla(0,0%,100%,.4)),#ebecf0;
+        background:linear-gradient(135deg,rgb(255 249 249 / 81%),hsla(0,0%,100%,.4)),#ffffff;
         background-blend-mode:soft-light,normal;
         border:2px solid hsla(0,0%,100%,.4);
         box-sizing:border-box;
@@ -1588,7 +1588,7 @@ a.nuxt-link-exact-active{
     margin-top:17px;
     background:#fff;
     border-radius:10px 10px 0 0;
-    padding:7px 10px 0
+    padding:14px 0px 0px;
 }
 @media (max-width:1023px){
     .toplabel3{
@@ -1636,7 +1636,7 @@ a.nuxt-link-exact-active{
 }
 @media (max-width:1023px){
     .first_form{
-        max-width:320px;
+
         width:100%;
         padding-left:15px
     }
@@ -1718,7 +1718,7 @@ a.nuxt-link-exact-active{
 }
 @media (max-width:1023px){
     .form_label5,.form_label6{
-        font-size:12px;
+        font-size:17px;
         line-height:122.2%
     }
 }
@@ -1737,11 +1737,12 @@ a.nuxt-link-exact-active{
 }
 @media (max-width:1023px){
     .day,.h4_light2,.sum:not(.sum-slider){
-        font-weight:300;
-        font-size:11px;
+        font-weight: 300;
+        font-size: 17px;
         line-height: 1px !important;
-        margin-top:10px;
-        margin-bottom:20px !important;
+        margin-top: 0px;
+        margin-bottom: 16px !important;
+        text-align: center;
     }
 }
 

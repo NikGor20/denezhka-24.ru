@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta data-n-head="1" data-hid="description" name="description" content="быстрые займы от 0%">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link data-n-head="1" rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link data-n-head="1" rel="icon" type="image/x-icon" href="images/img//favicon.ico">
         <link data-n-head="1" rel="stylesheet" href="/cerapro/cerapro.css">
         <link data-n-head="1" rel="stylesheet" href="./assets/main.css">
         <link data-n-head="1" rel="stylesheet" href="./assets/jquery-ui.css">
@@ -25,8 +25,11 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Переключатель навигации">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+
                         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
                                 <li class="nav-item active">
                                     <a class="nav-link nuxt-link-exact-active" href="./">Главная </a>
                                 </li>
@@ -40,7 +43,12 @@
                                     <a href="./cancel.php" class="nav-link">Отписаться</a>
                                 </li>
                             </ul>
+
                         </div>
+                        <a class="navbar-brand" href="./">
+                            <img src="images/img/logo.png"  height="50" class="d-inline-block align-top" alt="">
+
+                        </a>
                     </nav>
                 </div>
             </div>
@@ -59,7 +67,7 @@
                         </p> 
                         <div class="divline4">
                             <p class="line4">
-                               Услуга обработки заявки платная,оформление девятьсот девяносто девять рублей каждые тридцать дней.
+                                Услуга обработки заявки платная,оформление девятьсот девяносто девять рублей каждые тридцать дней.
 
                             </p>
                         </div>
@@ -101,7 +109,7 @@
                                     Обязуюсь вернуть <span class="sum">50 000</span> рублей через
                                     <span class="day">25</span> дней
                                 </h4> 
-                                 <a href="./lead.php" onclick="btnLink();return false;" class="">
+                                <a href="./lead.php" onclick="btnLink();return false;" class="">
                                     <button type="button" class="btnmaplink_2 btn">Оформить</button>
                                 </a>
                             </div>
@@ -172,7 +180,7 @@
                         </div>
                     </div> 
                     <div class="tophowbtnrow">
-                         <a href="./lead.php" onclick="btnLink();return false;" class="">
+                        <a href="./lead.php" onclick="btnLink();return false;" class="">
                             <button type="button" class="tophowbtn btn">Оставить заявку</button>
                         </a> 
                         <div class="univers_prev_next_row">
@@ -199,12 +207,12 @@
                                         <span style="margin-left: 5px; color: rgb(255, 255, 255);">до 30 000 ₽</span>
                                         <br>
                                         <img src="images/img/wk_calendar.svg" alt="" class="img-fluid">от 5 до 21 дня<br>
-                                       
+
                                     </p>
                                 </div>
                             </div>
                             <div>
-                                 <a href="./lead.php" onclick="btnLink();return false;" class="">
+                                <a href="./lead.php" onclick="btnLink();return false;" class="">
                                     <button type="button" class="whatkindbtn btn">
                                         Оформить
                                     </button>
@@ -220,12 +228,12 @@
                                         <span style="margin-left: 5px; color: rgb(255, 255, 255);">до 15 000 ₽</span>
                                         <br>
                                         <img src="images/img/wk_calendar.svg" alt="" class="img-fluid">от 5 до 33 дня<br>
-                                        
+
                                     </p>
                                 </div>
                             </div>
                             <div>
-                                 <a href="./lead.php" onclick="btnLink();return false;" class="">
+                                <a href="./lead.php" onclick="btnLink();return false;" class="">
                                     <button type="button" class="whatkindbtn btn">Оформить</button>
                                 </a>
                             </div>
@@ -239,12 +247,12 @@
                                         <span style="margin-left: 5px; color: rgb(255, 255, 255);">до 50 000 ₽</span>
                                         <br>
                                         <img src="images/img/wk_calendar.svg" alt="" class="img-fluid">от 10 до 14 недель<br>
-                                        
+
                                     </p>
                                 </div>
                             </div> 
                             <div>
-                                 <a href="./lead.php" onclick="btnLink();return false;" class="">
+                                <a href="./lead.php" onclick="btnLink();return false;" class="">
                                     <button type="button" class="whatkindbtn btn">Оформить</button>
                                 </a>
                             </div>
@@ -258,12 +266,12 @@
                                         <span style="margin-left: 5px; color: rgb(255, 255, 255);">до 80 000 ₽</span>
                                         <br>
                                         <img src="images/img/wk_calendar.svg" alt="" class="img-fluid">от 16 до 18 недель<br>
-                                        
+
                                     </p>
                                 </div>
                             </div>
                             <div>
-                                 <a href="./lead.php" onclick="btnLink();return false;" class="">
+                                <a href="./lead.php" onclick="btnLink();return false;" class="">
                                     <button type="button" class="whatkindbtn btn">Оформить</button>
                                 </a>
                             </div>
@@ -329,7 +337,7 @@
                         </div>
                     </div>
                     <div class="waystogetbtnrow">
-                         <a href="./lead.php" onclick="btnLink();return false;" class="">
+                        <a href="./lead.php" onclick="btnLink();return false;" class="">
                             <button type="button" class="waystogetbtn btn">
                                 Оставить заявку
                             </button>
@@ -475,7 +483,7 @@
                                 помочь в трудной ситуации
                             </p>
                             <div class="nobankbtnline">
-                                 <a href="./lead.php" onclick="btnLink();return false;" class="">
+                                <a href="./lead.php" onclick="btnLink();return false;" class="">
                                     <button type="button" class="nobankbtn btn">Оформить</button>
                                 </a>
                             </div>

@@ -1531,7 +1531,7 @@ a.nuxt-link-exact-active{
     }
 }
 .formblock2{
-    width:964px;
+    width:1040px;
     height:130px;
     background:linear-gradient(135deg,rgba(0,0,0,.4),hsla(0,0%,100%,.4)),#ebecf0;
     background-blend-mode:soft-light,normal;
@@ -1581,18 +1581,18 @@ a.nuxt-link-exact-active{
     background:linear-gradient(90deg,#3d4e81,#5753c9 48%,#6e7ff3);
     box-shadow:0 7px 11px rgba(0,0,0,.2);
     border-radius:20px;
-    margin-bottom:10px;
+    margin-bottom:27px;
     font-size:18px;
     color:#fff
 }
 .toplabel3{
-    width:273px;
-    display:flex;
-    justify-content:space-between;
-    margin-top:17px;
-    background:#fff;
-    border-radius:10px 10px 0 0;
-    padding:14px 0px 0px;
+    width: 289px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    background: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 14px 10px 0px;
 }
 @media (max-width:1023px){
     .toplabel3{

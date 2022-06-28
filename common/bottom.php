@@ -251,6 +251,9 @@
                     <a href="./cancel.php" class="flinkLink">
                         <p>Отписаться</p>
                     </a> 
+                    <a href="./vitrina.php" class="flinkLink">
+                        <p>Витрина</p>
+                    </a> 
                 </div>
             </div>
         </div>

@@ -45,91 +45,77 @@
 
                 function scriptLoadHandler() {
                     $ = window.jQuery.noConflict(true);
-                    // main();
+                    main();
                 }
 
                 function main() {
+                    $.ajax({
+                        url: '//api.click-lead.ru/offers',
+                        method: 'post',
+                        dataType: 'JSON',
+                        data:
+                            {
+                                'type':'vitrina',
+                                'goal':'comebacker',
+                                'user_id': localStorage.getItem('leadId')
+                            },
+                        error: function (xhr) {
+                            console.log(xhr);
 
-                    console.log('https://creditmarket-crm.ru/frontend/web/index.php?r=siteVitrina&partner=' + localStorage.getItem('partner') + '&domine=' + window.location.host);
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            let i = 1;
+                            let cur_offer = 1;
+                            let tags_collection = ['Лучшее предложение', 'Выгодные условия', 'Мгновенное решение', 'Без отказов', 'Первый заём бесплатно', 'Online-выдача на карту', 'Только паспорт', 'Народный выбор', 'Одобряют каждому', 'Решение за 1 минуту', 'Действует акция', 'Первый займ 0%'];
+                            $('#exVitrinaCardsTop').html("");
+                            $('#exVitrinaCardsBottom').html("");
+                            $.each(data.vitrina, function (key, item) {
+                                console.log(item.logo);
+                                let probability_value = Math.round(100 - (cur_offer * 1.3));
+                                let tag_text = tags_collection[(cur_offer > tags_collection.length) ? cur_offer - 1 - tags_collection.length : cur_offer - 1];
 
-                    $.get('https://creditmarket-crm.ru/frontend/web/index.php?r=siteVitrina&partner=' + localStorage.getItem('partner') + '&domine=' + window.location.host,
-                            function (data) {
+                                var card = '<div class="shadow catalog_card">\n\
+                                            <div class="img_wrap">\n\
+                                                <img src="https://click-lead.ru' + item.logo + '" alt="image"></div>\n\
+                                            <p class="tag-text"><span>' + tag_text + '</span></p>\n\
+    \n\                                         <div class="probability-value ' + ((probability_value >= 85) ? 'green' : 'orange') + '">\n\
+    \n\                                             <span>' + probability_value + '%</span>\n\
+    \n\                                         </div>\n\
+    \n\                                         <div class="logo">\n\
+    \n\                                             <a href="' + item.link + '&sub3=comeback" target= "_blank" onclick="setOfferVisited(this)">\n\
+    \n\                                                 <img src="//click-lead.ru' + item.logo + '" alt="image">\n\
+    \n\                                             </a>\n\
+    \n\                                         </div>\n\
+                                            <ul>\n\
+                                                <li>Процентная ставка ' + item.percentage + '%</li>\n\
+                                                <li>ПРЕДОДОБРЕНО до ' + parseInt(item.max_loan).toLocaleString("ru") + 'RUB</li>\n\
+                                                <li>На срок от ' + item.loan_length_min + ' до '+ item.loan_length_max + ' дней</li>\n\
+                                            </ul>\n\
+                                            <div class="wrap_btn">\n\
+                                                <a href="' + item.link + '&sub3=comeback" target= "_blank" onclick="setOfferVisited(this)">\n\
+                                                    <div class="btn__vitrina">Получить деньги</div>\n\
+                                                </a>\n\
+                                            </div>\n\
+                                            <p class="review-title">Короткий видео-отзыв</p><div class="card_video card_video' + i + '">\n\
+                                                <a href="' + item.link + '&sub3=comeback" target="_blank" class="open-video-comparison"  data-src="./video/consultant' + i + '.mp4">\n\
+                                                    <picture><img src="./img/gif/top.png" style="width:90%" alt=""></picture></a>\n\
+                                            </div>\n\
+                                        </div>';
+                                if(i <= 5){
+                                    $('#exVitrinaCardsTop').append(card);
 
-                                $('#exVitrinaCardsTop').html("");
-                                var i = 1;
-                                let cur_offer = 1;
-                                let tags_collection = ['Лучшее предложение', 'Выгодные условия', 'Мгновенное решение', 'Без отказов', 'Первый заём бесплатно', 'Online-выдача на карту', 'Только паспорт', 'Народный выбор', 'Одобряют каждому', 'Решение за 1 минуту', 'Действует акция', 'Первый займ 0%'];
-                                $.each(data, function (key, item) {
-                                    if (item.position == 'top') {
-                                        let probability_value = Math.round(100 - (cur_offer * 1.3));
-                                        let tag_text = tags_collection[(cur_offer > tags_collection.length) ? cur_offer - 1 - tags_collection.length : cur_offer - 1];
-                                        var card = '<div class="shadow catalog_card">\n\
-                                                    <div class="img_wrap">\n\
-                                                        <img src="https://creditmarket-crm.ru/frontend/web/uploads/siteVitrina/cards/item' + i + '.png" alt="image"></div>\n\
-                                                    <p class="tag-text"><span>' + tag_text + '</span></p><div class="probability-value ' + ((probability_value >= 85) ? 'green' : 'orange') + '"><span>' + probability_value + '%</span></div><div class="logo"><a href="' + item.link + '&sub3=comeback" target= "_blank" onclick="setOfferVisited(this)"><img src="https://creditmarket-crm.ru/frontend/web/uploads/siteVitrina/logos/' + item.logo + '" alt="image"></a></div>\n\
-                                                    <ul>\n\
-                                                        <li>' + item.str_1 + '</li>\n\
-                                                        <li>' + item.str_2 + '</li>\n\
-                                                        <li>' + item.str_3 + '</li>\n\
-                                                    </ul>\n\
-                                                    <div class="wrap_btn">\n\
-                                                        <a href="' + item.link + '&sub3=comeback" target= "_blank" onclick="setOfferVisited(this)">\n\
-                                                            <div class="btn__vitrina">Получить деньги</div>\n\
-                                                        </a>\n\
-                                                    </div>\n\
-                                                    <p class="review-title">Короткий видео-отзыв</p><div class="card_video card_video' + i + '">\n\
-                                                        <a href="' + item.link + '&sub3=comeback" target="_blank" class="open-video-comparison"  data-src="./video/consultant' + i + '.mp4">\n\
-                                                            <picture><img src="./img/gif/top.png" style="width:90%" alt=""></picture></a>\n\
-                                                    </div>\n\
-                                                </div>';
+                                }else{
+                                    $('#exVitrinaCardsBottom').append(card);
+                                }
+                                cur_offer++;
 
-                                        $('#exVitrinaCardsTop').append(card);
-                                        cur_offer++;
-                                    }
-                                    i++;
-                                    if (i > 5) {
-                                        i = 1;
-                                    }
-                                });
+                                i++;
 
-                                var i = 1;
-                                $('#exVitrinaCardsBottom').html("");
-                                $.each(data, function (key, item) {
-                                    if (item.position == 'bottom') {
-                                        let probability_value = Math.round(100 - (cur_offer * 1.3));
-                                        let tag_text = tags_collection[(cur_offer > tags_collection.length) ? cur_offer - 1 - tags_collection.length : cur_offer - 1];
-                                        var card = '<div class="catalog_card catalog_card__simple">\n\
-                                                    <div class="img_wrap"><img src="https://creditmarket-crm.ru/frontend/web/uploads/siteVitrina/cards/item' + i + '.png" alt="image"></div>\n\
-                                                    ' + ((i % 2 == 1) ? '<p class="tag-text"><span>' + tag_text + '</span></p>' : '') + '<div class="probability-value ' + ((probability_value >= 85) ? 'green' : 'orange') + '"><span>' + probability_value + '%</span></div><div class="logo"><a href="' + item.link + '&sub3=comeback" target= "_blank" onclick="setOfferVisited(this)"><img src="https://creditmarket-crm.ru/frontend/web/uploads/siteVitrina/logos/' + item.logo + '" alt="image"></a></div>\n\
-                                                    <ul>\n\
-                                                        <li>' + item.str_1 + '</li>\n\
-                                                        <li>' + item.str_2 + '</li>\n\
-                                                        <li>' + item.str_3 + '</li>\n\
-                                                    </ul>\n\
-                                                    <div class="wrap_btn">\n\
-                                                        <a href="' + item.link + '&sub3=comeback" target= "_blank" onclick="setOfferVisited(this)">\n\
-                                                            <div class="btn__vitrina">Получить деньги</div>\n\
-                                                        </a>\n\
-                                                    </div>\n\
-                                                </div>';
-
-                                        if (i == 6) {
-                                            card += '<div class="banner_card additional_offers"><h3> Дополнительные предложения, но с меньшей вероятностью одобрения</h3><p>Подавайте анкету в эти организации только после оформления в остальных организациях</p></div>'
-                                        }
-
-                                        $('#exVitrinaCardsBottom').append(card);
-                                        cur_offer++;
-                                    }
-
-                                    i++;
-                                    if (i > 5) {
-                                        i = 1;
-                                    }
-                                });
-                            })
-                            .fail(function (xhr) {
-                                console.log(xhr);
                             });
+                        }
+
+                    });
                 }
                 function getUrlVars() {
 

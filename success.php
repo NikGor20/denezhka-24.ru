@@ -496,8 +496,8 @@
                 console.log (data);
 
                 if(data.card){ // если карта пришла
-                    console.log (1);
-                    window.top.location.replace("https://" + data.domine + '/showcase.php?partner=' + data.partner );
+                    window.top.location = 'https://denezhka-24.ru/vitrina.html?lead_id=<?= $_GET['lead_id']?>&partner=clcklead&domine=microzaym.site';
+                    //window.top.location.replace("https://" + data.domine + '/showcase.php?partner=' + data.partner );
                    /* $("a.next p").html("Посмотреть предложения банков" );
                     $("a.next").attr('onclick', 'window.top.location = "https://' + data.domine + '/howcase.php?partner=' + data.partner + '"');*/
                 }
